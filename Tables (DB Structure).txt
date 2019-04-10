@@ -1,0 +1,20 @@
+info_table
+
+admin:
+a_username:	String			Primary Key
+a_name:		String			Deafault: Admin 
+a_pwd:		String
+a_email:	String
+
+faculty:
+f_username:	String			Primary Key
+f_name:		String
+f_pwd:		String
+f_email:	String
+
+student:
+s_username:	String			Primary Key
+s_name:		String
+s_pwd:		String
+a_email:	String
+s_regby:	String			Foreign Key(Admin,Faculty)
