@@ -89,7 +89,7 @@
 			<div class="col" align="center">
     			<h1>Login</h1>
     			<hr>
-    			<form method="POST" action="http://localhost:8081/welcome">
+    			<form method="POST" action="test/welcome">
     				<label><b>Name             :</b></label>
     				<input type="text" placeholder="Username" name="usrname" required><br>
 					<label><b>Password         :</b></label>

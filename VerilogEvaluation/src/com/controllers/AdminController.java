@@ -1,5 +1,6 @@
 package com.controllers;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -18,15 +19,15 @@ import com.servicesapi.AdminService;
 @Controller
 public class AdminController 
 {
-	@Autowired
-	AdminService adminServices;
+//	@Autowired
+//	AdminService adminServices;
 	
 	@RequestMapping(value="/asaveOrUpdate", method=RequestMethod.POST)
 	public @ResponseBody Map<String,Object> getSaved(Admin admin)
 	{
 		Map<String,Object> map = new HashMap<String,Object>();
 		
-		if(adminServices.saveOrUpdate(admin))
+		if(true)//adminServices.saveOrUpdate(admin))
 		{
 			map.put("status","200");
 			map.put("message","Your record have been saved successfully");
@@ -39,7 +40,7 @@ public class AdminController
 	public @ResponseBody Map<String,Object> getAll(Admin admin)
 	{
 		Map<String,Object> map = new HashMap<String,Object>();
-			List<Admin> list = adminServices.list();
+			List<Admin> list = new ArrayList<>() ;//adminServices.list();
 			if (list != null)
 			{
 				map.put("status","200");
@@ -59,7 +60,7 @@ public class AdminController
 	public @ResponseBody Map<String,Object> delete(Admin admin)
 	{
 		Map<String,Object> map = new HashMap<String,Object>();	
-		if(adminServices.delete(admin))
+		if(true)//adminServices.delete(admin))
 		{
 			map.put("status","200");
 			map.put("message","Your record have been deleted successfully");

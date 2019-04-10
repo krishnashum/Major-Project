@@ -1,5 +1,6 @@
 package com.controllers;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -16,14 +17,14 @@ import com.servicesapi.FacultyService;
 @Controller
 public class FacultyController 
 {
-	@Autowired
-	FacultyService facultyServices;
+//	@Autowired
+//	FacultyService facultyServices;
 	
 	@RequestMapping(value="/fsaveOrUpdate", method=RequestMethod.POST)
 	public @ResponseBody Map<String,Object> getSaved(Faculty faculty)
 	{
 		Map<String,Object> map = new HashMap<String,Object>();
-		if(facultyServices.saveOrUpdate(faculty))
+		if(true)//facultyServices.saveOrUpdate(faculty))
 		{
 			map.put("status","200");
 			map.put("message","Your record have been saved successfully");
@@ -36,7 +37,7 @@ public class FacultyController
 	public @ResponseBody Map<String,Object> getAll(Faculty faculty)
 	{
 		Map<String,Object> map = new HashMap<String,Object>();
-		List<Faculty> list = facultyServices.list();
+		List<Faculty> list = new ArrayList<>();//facultyServices.list();
 		if (list != null)
 		{
 			map.put("status","200");
@@ -56,7 +57,7 @@ public class FacultyController
 	public @ResponseBody Map<String,Object> delete(Faculty faculty)
 	{
 		Map<String,Object> map = new HashMap<String,Object>();
-		if(facultyServices.delete(faculty))
+		if(true)//facultyServices.delete(faculty))
 		{
 			map.put("status","200");
 			map.put("message","Your record have been deleted successfully");
